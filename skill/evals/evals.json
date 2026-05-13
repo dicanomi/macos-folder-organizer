@@ -1,0 +1,23 @@
+{
+  "skill_name": "find-duplicates",
+  "evals": [
+    {
+      "id": 1,
+      "prompt": "I have a folder called Downloads with a bunch of duplicate images and files scattered everywhere. I want to find all the duplicates by both filename and content, see what you'd move first (dry run), then move them to a dated Duplicates folder organized by type. Show me the report when done.",
+      "expected_output": "Dry run showing files to be moved, confirmation step, then files moved into Duplicates-[DATE]/ with subfolders (Images, Videos, Documents, etc.) and a JSON report",
+      "files": []
+    },
+    {
+      "id": 2,
+      "prompt": "Find duplicates in my Documents folder but only check for files with the same name in different places. I don't need full content hashing, just the quick filename match. Then move them.",
+      "expected_output": "Filename-only duplicate detection, dry run, files moved to Duplicates-[DATE]/Documents/",
+      "files": []
+    },
+    {
+      "id": 3,
+      "prompt": "Scan my entire Dropbox Design Projects folder for duplicates. I have thousands of files. Show me the dry run, then ask before moving anything.",
+      "expected_output": "Dry run report showing total files scanned, duplicates found by category, space savings, confirmation prompt before moving",
+      "files": []
+    }
+  ]
+}
